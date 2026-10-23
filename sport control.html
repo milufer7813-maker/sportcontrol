@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SPORT CONTROL: seguimiento de rutinas y objetivos de entrenamiento.">
+  <title>SPORT CONTROL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <main id="authScreen" class="auth-screen">
+    <section class="auth-card card-panel z-depth-2" aria-labelledby="authTitle">
+      <a class="brand auth-brand" href="#inicio" aria-label="SPORT CONTROL inicio"><span class="brand-mark">SC</span><span>SPORT<br><strong>CONTROL</strong></span></a>
+      <p class="eyebrow">TU PROGRESO, BAJO CONTROL</p>
+      <h1 id="authTitle">Inicia sesión para continuar</h1>
+      <p>Accede a tus rutinas, objetivos y avances.</p>
+      <form id="loginForm" class="form-grid auth-form">
+        <label>Correo electrónico<input type="email" name="email" autocomplete="email" required placeholder="nombre@correo.com"></label>
+        <label>Contraseña<input type="password" name="password" autocomplete="current-password" required minlength="4" placeholder="Ingresa tu contraseña"></label>
+        <label>Ingresar como<select name="role"><option value="personal">Miembro</option><option value="entrenador">Entrenador</option></select></label>
+        <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+      </form>
+      <p class="auth-switch">¿Primera vez? <button class="text-button" id="showRegister">Crear cuenta</button></p>
+      <p class="helper">Prototipo: puedes ingresar con cualquier correo y contraseña.</p>
+    </section>
+    <section id="registerCard" class="auth-card hidden" aria-labelledby="registerTitle">
+      <p class="eyebrow">SPORT CONTROL</p><h2 id="registerTitle">Crea tu cuenta</h2>
+      <form id="registerForm" class="form-grid auth-form">
+        <label>Nombre completo<input name="name" autocomplete="name" required minlength="3"></label>
+        <label>Correo electrónico<input type="email" name="email" autocomplete="email" required></label>
+        <label>Contraseña<input type="password" name="password" autocomplete="new-password" required minlength="4"></label>
+        <button class="btn btn-primary" type="submit">Crear cuenta</button>
+      </form>
+      <p class="auth-switch">¿Ya tienes cuenta? <button class="text-button" id="showLogin">Iniciar sesión</button></p>
+    </section>
+  </main>
+  <div class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#inicio" aria-label="SPORT CONTROL inicio">
+        <span class="brand-mark">SC</span><span>SPORT<br><strong>CONTROL</strong></span>
+      </a>
+      <div class="profile-mini">
+        <div class="avatar">AR</div>
+        <div><strong id="sidebarName">Andrés Rojas</strong><small id="sidebarRole">Entrenador</small></div>
+      </div>
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav-link active" data-view="inicio"><span>⌂</span> Inicio</button>
+        <button class="nav-link trainer-only" data-view="miembros"><span>♧</span> Miembros</button>
+        <button class="nav-link trainer-only" data-view="ejercicios"><span>＋</span> Gestionar ejercicios</button>
+        <button class="nav-link personal-only hidden" data-view="rutinas"><span>▤</span> Mis rutinas</button>
+        <button class="nav-link personal-only hidden" data-view="historial"><span>◷</span> Entrenamientos</button>
+        <button class="nav-link personal-only hidden" data-view="alimentacion"><span>◉</span> Alimentación</button>
+        <button class="nav-link personal-only hidden" data-view="objetivos"><span>◎</span> Mis objetivos</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <p class="motto">NO MÁS EXCUSAS.<br>SUPERA TUS LÍMITES.</p>
+        <button id="logoutBtn" class="btn btn-ghost full-width">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar">☰</button>
+        <div><span class="eyebrow">TU PROGRESO, BAJO CONTROL</span><h1 id="pageTitle"></h1></div>
+        <div class="top-actions"><time class="today" aria-label="Fecha y hora local"><span id="todayTime" class="today-time"></span><span id="todayLabel" class="today-date"></span></time><button class="btn btn-primary trainer-only" data-view="nuevo-miembro">+ Registrar miembro</button></div>
+      </header>
+
+      <section id="view-inicio" class="view">
+        <div class="welcome-panel">
+          <div><p class="eyebrow light">SPORT CONTROL · PANEL PRINCIPAL</p><h2>Entrena con propósito.</h2><p>Organiza tus rutinas, revisa tu avance y sigue trabajando por tu meta.</p></div>
+          <div class="welcome-icon" aria-hidden="true">✦</div>
+        </div>
+        <div class="stats-grid trainer-only">
+          <article class="stat-card card-panel z-depth-1"><span class="stat-icon green">♧</span><p>Miembros registrados</p><strong id="statMembers">10</strong><small>Personas en seguimiento</small></article>
+          <article class="stat-card card-panel z-depth-1"><span class="stat-icon amber">◷</span><p>Atrasados</p><strong id="statLate">5</strong><small>Revisar su avance</small></article>
+          <article class="stat-card card-panel z-depth-1"><span class="stat-icon blue">✓</span><p>Entrenando hoy</p><strong id="statToday">3</strong><small>Actividad registrada</small></article>
+        </div>
+        <div class="content-grid trainer-only">
+          <article class="panel card-panel z-depth-1"><div class="panel-heading"><div><p class="eyebrow">SEGUIMIENTO</p><h3>Miembros atrasados</h3></div><button class="text-button" data-view="miembros">Ver todos</button></div><div id="lateList" class="simple-list"></div></article>
+          <article class="panel card-panel z-depth-1"><div class="panel-heading"><div><p class="eyebrow">ACTIVIDAD</p><h3>Entrenando hoy</h3></div><span class="pill pill-green">En curso</span></div><div id="todayList" class="simple-list"></div></article>
+        </div>
+        <div class="panel personal-only hidden"><p class="eyebrow">TU RUTINA</p><h3>Hoy es un buen día para avanzar</h3><p>Consulta tus rutinas y marca tu entrenamiento cuando lo termines.</p><button class="btn btn-primary" data-view="rutinas">Ver mis rutinas</button></div>
+      </section>
+
+      <section id="view-miembros" class="view hidden">
+        <div class="section-toolbar"><div><p class="eyebrow">GESTIÓN DEL GIMNASIO</p><h2>Miembros</h2><p>Consulta su rutina, avance y último entrenamiento.</p></div><button class="btn btn-primary" data-view="nuevo-miembro">+ Nuevo miembro</button></div>
+        <div class="panel card-panel z-depth-1">
+          <div class="filters"><label class="search-field">Buscar por nombre<input id="memberSearch" type="search" placeholder="Escribe un nombre…"></label><label>Filtrar por estado<select id="statusFilter"><option value="todos">Todos los estados</option><option value="Atrasado">Atrasado</option><option value="Al día">Al día</option></select></label></div>
+          <div class="table-wrap"><table><thead><tr><th>Miembro</th><th>Rutina</th><th>Avance</th><th>Último entreno</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="membersTable"></tbody></table></div>
+          <p class="helper">Datos de demostración. Se reinician al recargar la página.</p>
+        </div>
+      </section>
+
+      <section id="view-nuevo-miembro" class="view hidden">
+        <div class="section-toolbar"><div><p class="eyebrow">GESTIÓN DEL GIMNASIO</p><h2>Registrar miembro</h2><p>Completa los datos básicos para agregar una persona.</p></div></div>
+        <form id="memberForm" class="panel form-grid">
+          <label>Nombre completo<input name="name" required minlength="3" placeholder="Ej. Camila Molina"></label>
+          <label>Correo electrónico<input name="email" type="email" required placeholder="nombre@correo.com"></label>
+          <label>Rutina inicial<select name="routine" required><option value="">Selecciona una rutina</option><option>Abdomen intermedio</option><option>Glúteo intermedio</option><option>Brazo intermedio</option><option>Pierna intermedio</option></select></label>
+          <label>Objetivo<input name="goal" placeholder="Ej. Mejorar resistencia"></label>
+          <div class="form-actions"><button type="button" class="btn btn-ghost" data-view="miembros">Cancelar</button><button class="btn btn-primary" type="submit">Guardar miembro</button></div>
+        </form>
+      </section>
+
+      <section id="view-ficha" class="view hidden">
+        <button class="text-button back-button" data-view="miembros">← Volver a miembros</button>
+        <div id="memberDetail"></div>
+      </section>
+
+      <section id="view-rutinas" class="view hidden">
+        <div class="section-toolbar"><div><p class="eyebrow">ENTRENAMIENTO PERSONAL</p><h2>Mis rutinas</h2><p>Elige una rutina y registra el día completado.</p></div></div>
+        <div id="routineCards" class="routine-grid"></div>
+      </section>
+
+      <section id="view-ejercicios" class="view hidden">
+        <div class="section-toolbar"><div><p class="eyebrow">GESTIÓN DEL ENTRENAMIENTO</p><h2>Gestionar ejercicios</h2><p>Agrega ejercicios o edita los existentes dentro de cada rutina.</p></div></div>
+        <form id="exerciseForm" class="panel form-grid">
+          <label>Rutina<select id="exerciseRoutine" name="routineId" required></select></label>
+          <label>Día del reto<input name="day" type="number" min="1" max="30" value="1" required></label>
+          <label>Nombre del ejercicio<input name="name" required maxlength="80" placeholder="Ej. Sentadillas"></label>
+          <label>Repeticiones o duración<input name="detail" required maxlength="60" placeholder="Ej. 15 repeticiones o 30 segundos"></label>
+          <div class="form-actions"><button type="button" id="cancelExerciseEdit" class="btn btn-ghost hidden">Cancelar edición</button><button id="saveExerciseButton" class="btn btn-primary" type="submit">Agregar ejercicio</button></div>
+          <p id="exerciseMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+        <div class="panel card-panel z-depth-1 exercise-management"><h3>Ejercicios de la rutina</h3><div id="exerciseList" class="simple-list" aria-live="polite"></div></div>
+      </section>
+
+      <section id="view-historial" class="view hidden">
+        <div class="section-toolbar"><div><p class="eyebrow">TU CONSTANCIA</p><h2>Historial de entrenamientos</h2><p>Consulta las sesiones registradas.</p></div></div>
+        <div class="panel card-panel z-depth-1"><h3>Historial reciente</h3><div id="workoutHistory" class="simple-list" aria-live="polite"></div></div>
+      </section>
+
+      <section id="view-alimentacion" class="view hidden">
+        <div class="section-toolbar"><div><p class="eyebrow">HÁBITOS QUE SUMAN</p><h2>Mi alimentación</h2><p>Registra tus comidas como parte de tu seguimiento diario.</p></div></div>
+        <form id="mealForm" class="panel form-grid">
+          <label>Comida<select name="meal"><option>Desayuno</option><option>Almuerzo</option><option>Cena</option><option>Merienda</option></select></label>
+          <label>Descripción<input name="description" required placeholder="Ej. Avena y fruta"></label>
+          <div class="form-actions"><button class="btn btn-primary" type="submit">Agregar comida</button></div>
+        </form>
+        <div class="panel card-panel z-depth-1"><h3>Registro de hoy</h3><div id="mealList" class="simple-list" aria-live="polite"></div><p class="helper">Registro de demostración: se conserva mientras esta página esté abierta.</p></div>
+      </section>
+
+      <section id="view-objetivos" class="view hidden">
+        <div class="section-toolbar"><div><p class="eyebrow">TU PROCESO</p><h2>Mis objetivos</h2><p>Define tu meta y registra tu progreso físico.</p></div></div>
+        <form id="goalForm" class="panel form-grid">
+          <label>Objetivo principal<input name="goal" value="Tonificar abdomen" required></label>
+          <label>Peso actual (kg)<input name="weight" type="number" min="1" max="500" step="0.1" value="76" required></label>
+          <label>Peso meta (kg)<input name="target" type="number" min="1" max="500" step="0.1" value="65" required></label>
+          <label>Fecha de logro<input name="date" type="date"></label>
+          <label>Objetivo de calorías al día<input name="calories" type="number" min="0" max="10000" value="1600"></label>
+          <div class="form-actions"><button class="btn btn-primary" type="submit">Guardar cambios</button></div>
+          <p id="goalMessage" class="form-message" role="status"></p>
+        </form>
+      </section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
