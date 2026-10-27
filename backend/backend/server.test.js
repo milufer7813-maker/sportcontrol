@@ -33,9 +33,9 @@ test("SPORT CONTROL API", async (t) => {
     const respuesta = await request(app).get("/api/rutinas");
 
     assert.equal(respuesta.statusCode, 200);
-    assert.equal(respuesta.body.length, 4);
+    assert.equal(respuesta.body.length, 7);
     assert.ok(respuesta.body.every((rutina) => rutina.id && rutina.nombre));
-    assert.deepEqual(respuesta.body.map((rutina) => rutina.nombre), ["Glúteo intermedio", "Brazo intermedio", "Pierna intermedio", "Abdomen intermedio"]);
+    assert.deepEqual(respuesta.body.map((rutina) => rutina.nombre), ["Glúteo intermedio", "Brazo intermedio", "Pierna intermedio", "Abdomen intermedio", "Glúteo avanzado", "Abdomen avanzado", "Pierna avanzado"]);
   });
 
   await t.test("POST y PUT /api/ejercicios permiten agregar y editar ejercicios", async () => {

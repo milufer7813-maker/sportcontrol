@@ -42,7 +42,7 @@ test("SPORT CONTROL API", async (t) => {
     const data = await response.json();
     assert.equal(response.status, 200);
     assert.ok(Array.isArray(data));
-    assert.deepEqual(data.map(routine => routine.name), ["Glúteo intermedio", "Brazo intermedio", "Pierna intermedio", "Abdomen intermedio"]);
+    assert.deepEqual(data.map(routine => routine.name), ["Glúteo intermedio", "Brazo intermedio", "Pierna intermedio", "Abdomen intermedio", "Glúteo avanzado", "Abdomen avanzado", "Pierna avanzado"]);
   });
 
   await t.test("POST /api/rutinas crea una rutina válida", async () => {
