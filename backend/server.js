@@ -598,7 +598,11 @@ const exercises = [
   { id: 580, routineId: 5, day: 22, name: "Levantamiento de pierna lateral", detail: "60 repeticiones (30 de cada lado)" },
   { id: 581, routineId: 5, day: 22, name: "Sentadillas con elevaciones de pierna", detail: "60 repeticiones (30 de cada lado)" },
   { id: 582, routineId: 5, day: 22, name: "Butt bridge", detail: "35 repeticiones" },
-  { id: 583, routineId: 5, day: 22, name: "Sentadilla en pared", detail: "40 segundos" }
+  { id: 583, routineId: 5, day: 22, name: "Sentadilla en pared", detail: "40 segundos" },
+  { id: 584, routineId: 5, day: 23, name: "Estocada hacia atrás", detail: "40 repeticiones (20 de cada lado)" },
+  { id: 585, routineId: 5, day: 23, name: "Froggy glutes", detail: "40 repeticiones (20 de cada lado)" },
+  { id: 586, routineId: 5, day: 23, name: "Pile squat", detail: "40 repeticiones" },
+  { id: 587, routineId: 5, day: 23, name: "Salto lateral", detail: "40 segundos" }
 ];
 
 app.get("/api", (req, res) => {
