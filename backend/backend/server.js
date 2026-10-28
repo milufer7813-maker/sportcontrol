@@ -611,7 +611,16 @@ const ejercicios = [
   { id: 592, routineId: 5, day: 24, name: "Salto lateral", detail: "40 segundos" },
   { id: 593, routineId: 5, day: 24, name: "Elevaciones traseras de pierna", detail: "60 repeticiones (30 de cada lado)" },
   { id: 594, routineId: 5, day: 24, name: "Butt bridge", detail: "40 repeticiones" },
-  { id: 595, routineId: 5, day: 24, name: "Sentadilla en pared", detail: "40 segundos" }
+  { id: 595, routineId: 5, day: 24, name: "Sentadilla en pared", detail: "40 segundos" },
+  { id: 596, routineId: 5, day: 25, name: "Elevaciones traseras de pierna", detail: "50 repeticiones (25 de cada lado)" },
+  { id: 597, routineId: 5, day: 25, name: "Fire hydrant", detail: "80 repeticiones (40 de cada lado)" },
+  { id: 598, routineId: 5, day: 25, name: "Estocada hacia atrás", detail: "40 repeticiones (20 de cada lado)" },
+  { id: 599, routineId: 5, day: 25, name: "Split squat", detail: "80 repeticiones (40 de cada lado)" },
+  { id: 600, routineId: 5, day: 25, name: "Butt bridge", detail: "40 repeticiones" },
+  { id: 601, routineId: 5, day: 25, name: "Squats", detail: "30 repeticiones" },
+  { id: 602, routineId: 5, day: 25, name: "Levantamiento de pierna", detail: "60 repeticiones (30 de cada lado)" },
+  { id: 603, routineId: 5, day: 25, name: "Sentadillas con elevaciones de pierna", detail: "40 repeticiones (20 de cada lado)" },
+  { id: 604, routineId: 5, day: 25, name: "Salto lateral", detail: "40 segundos" }
 ];
 
 // Permite abrir el prototipo web aunque se inicie este servidor duplicado.
