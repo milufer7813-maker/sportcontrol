@@ -578,7 +578,17 @@ const exercises = [
   { id: 560, routineId: 5, day: 19, name: "Salto lateral", detail: "35 segundos" },
   { id: 561, routineId: 5, day: 19, name: "Levantamiento de pierna lateral", detail: "60 repeticiones (30 de cada lado)" },
   { id: 562, routineId: 5, day: 19, name: "Butt bridge", detail: "30 repeticiones" },
-  { id: 563, routineId: 5, day: 19, name: "Sentadilla en pared", detail: "44 segundos" }
+  { id: 563, routineId: 5, day: 19, name: "Sentadilla en pared", detail: "44 segundos" },
+  { id: 564, routineId: 5, day: 20, name: "Squats", detail: "40 repeticiones" },
+  { id: 565, routineId: 5, day: 20, name: "Froggy glutes", detail: "30 repeticiones (15 de cada lado)" },
+  { id: 566, routineId: 5, day: 20, name: "Zancada frontal", detail: "40 repeticiones" },
+  { id: 567, routineId: 5, day: 20, name: "Split squat", detail: "60 repeticiones (30 de cada lado)" },
+  { id: 568, routineId: 5, day: 20, name: "Butt bridge", detail: "30 repeticiones" },
+  { id: 569, routineId: 5, day: 20, name: "Pile squat", detail: "35 repeticiones" },
+  { id: 570, routineId: 5, day: 20, name: "Zancada cruzada", detail: "36 repeticiones (18 de cada lado)" },
+  { id: 571, routineId: 5, day: 20, name: "Saltos", detail: "30 segundos" },
+  { id: 572, routineId: 5, day: 20, name: "Elevaciones traseras de pierna", detail: "60 repeticiones (30 de cada lado)" },
+  { id: 573, routineId: 5, day: 20, name: "Salto lateral", detail: "46 segundos" }
 ];
 
 app.get("/api", (req, res) => {
