@@ -620,7 +620,17 @@ const ejercicios = [
   { id: 601, routineId: 5, day: 25, name: "Squats", detail: "30 repeticiones" },
   { id: 602, routineId: 5, day: 25, name: "Levantamiento de pierna", detail: "60 repeticiones (30 de cada lado)" },
   { id: 603, routineId: 5, day: 25, name: "Sentadillas con elevaciones de pierna", detail: "40 repeticiones (20 de cada lado)" },
-  { id: 604, routineId: 5, day: 25, name: "Salto lateral", detail: "40 segundos" }
+  { id: 604, routineId: 5, day: 25, name: "Salto lateral", detail: "40 segundos" },
+  { id: 605, routineId: 5, day: 26, name: "Donkey kick", detail: "40 repeticiones (20 de cada lado)" },
+  { id: 606, routineId: 5, day: 26, name: "Sentadillas con salto", detail: "30 repeticiones" },
+  { id: 607, routineId: 5, day: 26, name: "Froggy glutes", detail: "40 repeticiones" },
+  { id: 608, routineId: 5, day: 26, name: "Salto lateral", detail: "40 segundos" },
+  { id: 609, routineId: 5, day: 26, name: "Pile squat", detail: "40 repeticiones" },
+  { id: 610, routineId: 5, day: 26, name: "Zancada cruzada", detail: "40 repeticiones" },
+  { id: 611, routineId: 5, day: 26, name: "Plancha con pierna", detail: "40 repeticiones (20 de cada lado)" },
+  { id: 612, routineId: 5, day: 26, name: "Sentadillas con salto", detail: "35 repeticiones" },
+  { id: 613, routineId: 5, day: 26, name: "Butt bridge", detail: "40 repeticiones" },
+  { id: 614, routineId: 5, day: 26, name: "Sentadilla en pared", detail: "50 segundos" }
 ];
 
 // Permite abrir el prototipo web aunque se inicie este servidor duplicado.
