@@ -13,7 +13,7 @@ const routines = [
   { id: 2, name: "Brazo intermedio", level: "Intermedio", duration: 30, body: "Brazos" },
   { id: 3, name: "Pierna intermedio", level: "Intermedio", duration: 30, body: "Piernas" },
   { id: 4, name: "Abdomen intermedio", level: "Intermedio", duration: 30, body: "Abdomen" },
-  { id: 5, name: "Glúteo avanzado", level: "Avanzado", duration: 30, body: "Glúteos", restDays: [7, 14, 21] },
+  { id: 5, name: "Glúteo avanzado", level: "Avanzado", duration: 30, body: "Glúteos", restDays: [7, 14, 21, 28] },
   { id: 6, name: "Abdomen avanzado", level: "Avanzado", duration: 30, body: "Abdomen", restDays: [7, 14, 21, 28] },
   { id: 7, name: "Pierna avanzado", level: "Avanzado", duration: 30, body: "Piernas", restDays: [7, 14, 21, 28] }
 ];
