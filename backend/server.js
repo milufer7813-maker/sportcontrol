@@ -588,7 +588,17 @@ const exercises = [
   { id: 570, routineId: 5, day: 20, name: "Zancada cruzada", detail: "36 repeticiones (18 de cada lado)" },
   { id: 571, routineId: 5, day: 20, name: "Saltos", detail: "30 segundos" },
   { id: 572, routineId: 5, day: 20, name: "Elevaciones traseras de pierna", detail: "60 repeticiones (30 de cada lado)" },
-  { id: 573, routineId: 5, day: 20, name: "Salto lateral", detail: "46 segundos" }
+  { id: 573, routineId: 5, day: 20, name: "Salto lateral", detail: "46 segundos" },
+  { id: 574, routineId: 5, day: 22, name: "Elevaciones traseras de pierna", detail: "50 repeticiones (25 de cada lado)" },
+  { id: 575, routineId: 5, day: 22, name: "Squats", detail: "40 repeticiones" },
+  { id: 576, routineId: 5, day: 22, name: "Donkey kick", detail: "60 repeticiones (30 de cada lado)" },
+  { id: 577, routineId: 5, day: 22, name: "Fire hydrant", detail: "80 repeticiones (40 de cada lado)" },
+  { id: 578, routineId: 5, day: 22, name: "Plancha con pierna elevada", detail: "40 repeticiones (20 de cada lado)" },
+  { id: 579, routineId: 5, day: 22, name: "Sumo squat calf", detail: "40 repeticiones" },
+  { id: 580, routineId: 5, day: 22, name: "Levantamiento de pierna lateral", detail: "60 repeticiones (30 de cada lado)" },
+  { id: 581, routineId: 5, day: 22, name: "Sentadillas con elevaciones de pierna", detail: "60 repeticiones (30 de cada lado)" },
+  { id: 582, routineId: 5, day: 22, name: "Butt bridge", detail: "35 repeticiones" },
+  { id: 583, routineId: 5, day: 22, name: "Sentadilla en pared", detail: "40 segundos" }
 ];
 
 app.get("/api", (req, res) => {
