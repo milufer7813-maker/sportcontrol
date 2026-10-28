@@ -13,7 +13,7 @@ const rutinas = [
   { id: 2, nombre: "Brazo intermedio", duracion: 30 },
   { id: 3, nombre: "Pierna intermedio", duracion: 30 },
   { id: 4, nombre: "Abdomen intermedio", duracion: 30 },
-  { id: 5, nombre: "Glúteo avanzado", duracion: 30, restDays: [7, 14] },
+  { id: 5, nombre: "Glúteo avanzado", duracion: 30, restDays: [7, 14, 21] },
   { id: 6, nombre: "Abdomen avanzado", duracion: 30, restDays: [7, 14, 21, 28] },
   { id: 7, nombre: "Pierna avanzado", duracion: 30, restDays: [7, 14, 21, 28] }
 ];
