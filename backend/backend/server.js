@@ -645,7 +645,15 @@ const ejercicios = [
   { id: 626, routineId: 5, day: 29, name: "Zancada frontal", detail: "40 repeticiones (20 de cada lado)" },
   { id: 627, routineId: 5, day: 29, name: "Salto lateral", detail: "40 segundos" },
   { id: 628, routineId: 5, day: 29, name: "Elevaciones traseras de pierna", detail: "60 repeticiones (30 de cada lado)" },
-  { id: 629, routineId: 5, day: 29, name: "Sentadilla en pared", detail: "50 segundos" }
+  { id: 629, routineId: 5, day: 29, name: "Sentadilla en pared", detail: "50 segundos" },
+  { id: 630, routineId: 5, day: 30, name: "Elevaciones traseras de pierna", detail: "50 repeticiones (25 de cada lado)" },
+  { id: 631, routineId: 5, day: 30, name: "Fire hydrant", detail: "80 repeticiones (40 de cada lado)" },
+  { id: 632, routineId: 5, day: 30, name: "Estocada hacia atrás", detail: "40 repeticiones (20 de cada lado)" },
+  { id: 633, routineId: 5, day: 30, name: "Salto lateral", detail: "40 segundos" },
+  { id: 634, routineId: 5, day: 30, name: "Split squat", detail: "80 repeticiones (40 de cada lado)" },
+  { id: 635, routineId: 5, day: 30, name: "Plancha con pierna elevada", detail: "40 repeticiones" },
+  { id: 636, routineId: 5, day: 30, name: "Sentadilla con elevación de pierna", detail: "40 repeticiones (20 de cada lado)" },
+  { id: 637, routineId: 5, day: 30, name: "Butt bridge", detail: "30 segundos" }
 ];
 
 // Permite abrir el prototipo web aunque se inicie este servidor duplicado.
