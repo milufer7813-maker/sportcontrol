@@ -15,7 +15,8 @@ const routines = [
   { id: 4, name: "Abdomen intermedio", level: "Intermedio", duration: 30, body: "Abdomen" },
   { id: 5, name: "Glúteo avanzado", level: "Avanzado", duration: 30, body: "Glúteos", restDays: [7, 14, 21, 28] },
   { id: 6, name: "Abdomen avanzado", level: "Avanzado", duration: 30, body: "Abdomen", restDays: [7, 14, 21, 28] },
-  { id: 7, name: "Pierna avanzado", level: "Avanzado", duration: 30, body: "Piernas", restDays: [7, 14, 21, 28] }
+  { id: 7, name: "Pierna avanzado", level: "Avanzado", duration: 30, body: "Piernas", restDays: [7, 14, 21, 28] },
+  { id: 8, name: "Brazo avanzado", level: "Avanzado", duration: 30, body: "Brazos", restDays: [] }
 ];
 const workouts = [];
 const exercises = [
@@ -652,7 +653,12 @@ const exercises = [
   { id: 634, routineId: 5, day: 30, name: "Split squat", detail: "80 repeticiones (40 de cada lado)" },
   { id: 635, routineId: 5, day: 30, name: "Plancha con pierna elevada", detail: "40 repeticiones" },
   { id: 636, routineId: 5, day: 30, name: "Sentadilla con elevación de pierna", detail: "40 repeticiones (20 de cada lado)" },
-  { id: 637, routineId: 5, day: 30, name: "Butt bridge", detail: "30 segundos" }
+  { id: 637, routineId: 5, day: 30, name: "Butt bridge", detail: "30 segundos" },
+  { id: 638, routineId: 8, day: 1, name: "Rotación de brazos", detail: "30 repeticiones" },
+  { id: 639, routineId: 8, day: 1, name: "Escalada de montaña", detail: "36 repeticiones (18 de cada lado)" },
+  { id: 640, routineId: 8, day: 1, name: "Flexiones", detail: "20 repeticiones" },
+  { id: 641, routineId: 8, day: 1, name: "Tríceps en silla", detail: "20 repeticiones" },
+  { id: 642, routineId: 8, day: 1, name: "Tablón", detail: "50 segundos" }
 ];
 
 app.get("/api", (req, res) => {

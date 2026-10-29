@@ -15,7 +15,8 @@ const rutinas = [
   { id: 4, nombre: "Abdomen intermedio", duracion: 30 },
   { id: 5, nombre: "Glúteo avanzado", duracion: 30, restDays: [7, 14, 21, 28] },
   { id: 6, nombre: "Abdomen avanzado", duracion: 30, restDays: [7, 14, 21, 28] },
-  { id: 7, nombre: "Pierna avanzado", duracion: 30, restDays: [7, 14, 21, 28] }
+  { id: 7, nombre: "Pierna avanzado", duracion: 30, restDays: [7, 14, 21, 28] },
+  { id: 8, nombre: "Brazo avanzado", duracion: 30, restDays: [] }
 ];
 
 const entrenamientos = [];
@@ -653,7 +654,12 @@ const ejercicios = [
   { id: 634, routineId: 5, day: 30, name: "Split squat", detail: "80 repeticiones (40 de cada lado)" },
   { id: 635, routineId: 5, day: 30, name: "Plancha con pierna elevada", detail: "40 repeticiones" },
   { id: 636, routineId: 5, day: 30, name: "Sentadilla con elevación de pierna", detail: "40 repeticiones (20 de cada lado)" },
-  { id: 637, routineId: 5, day: 30, name: "Butt bridge", detail: "30 segundos" }
+  { id: 637, routineId: 5, day: 30, name: "Butt bridge", detail: "30 segundos" },
+  { id: 638, routineId: 8, day: 1, name: "Rotación de brazos", detail: "30 repeticiones" },
+  { id: 639, routineId: 8, day: 1, name: "Escalada de montaña", detail: "36 repeticiones (18 de cada lado)" },
+  { id: 640, routineId: 8, day: 1, name: "Flexiones", detail: "20 repeticiones" },
+  { id: 641, routineId: 8, day: 1, name: "Tríceps en silla", detail: "20 repeticiones" },
+  { id: 642, routineId: 8, day: 1, name: "Tablón", detail: "50 segundos" }
 ];
 
 // Permite abrir el prototipo web aunque se inicie este servidor duplicado.
