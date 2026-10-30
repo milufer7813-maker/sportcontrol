@@ -16,7 +16,7 @@ const routines = [
   { id: 5, name: "Glúteo avanzado", level: "Avanzado", duration: 30, body: "Glúteos", restDays: [7, 14, 21, 28] },
   { id: 6, name: "Abdomen avanzado", level: "Avanzado", duration: 30, body: "Abdomen", restDays: [7, 14, 21, 28] },
   { id: 7, name: "Pierna avanzado", level: "Avanzado", duration: 30, body: "Piernas", restDays: [7, 14, 21, 28] },
-  { id: 8, name: "Brazo avanzado", level: "Avanzado", duration: 30, body: "Brazos", restDays: [] }
+  { id: 8, name: "Brazo avanzado", level: "Avanzado", duration: 30, body: "Brazos", restDays: [7] }
 ];
 const workouts = [];
 const exercises = [

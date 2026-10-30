@@ -16,7 +16,7 @@ const rutinas = [
   { id: 5, nombre: "Glúteo avanzado", duracion: 30, restDays: [7, 14, 21, 28] },
   { id: 6, nombre: "Abdomen avanzado", duracion: 30, restDays: [7, 14, 21, 28] },
   { id: 7, nombre: "Pierna avanzado", duracion: 30, restDays: [7, 14, 21, 28] },
-  { id: 8, nombre: "Brazo avanzado", duracion: 30, restDays: [] }
+  { id: 8, nombre: "Brazo avanzado", duracion: 30, restDays: [7] }
 ];
 
 const entrenamientos = [];
