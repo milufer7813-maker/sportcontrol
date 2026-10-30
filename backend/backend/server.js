@@ -684,7 +684,13 @@ const ejercicios = [
   { id: 664, routineId: 8, day: 8, name: "Brazos sobre el pecho", detail: "20 segundos" },
   { id: 665, routineId: 8, day: 8, name: "Tríceps en silla", detail: "20 repeticiones" },
   { id: 666, routineId: 8, day: 8, name: "Planchas con toque al pecho", detail: "16 repeticiones (8 de cada lado)" },
-  { id: 667, routineId: 8, day: 8, name: "Tríceps en suelo", detail: "20 repeticiones" }
+  { id: 667, routineId: 8, day: 8, name: "Tríceps en suelo", detail: "20 repeticiones" },
+  { id: 668, routineId: 8, day: 9, name: "Rotaciones de brazos", detail: "22 repeticiones" },
+  { id: 669, routineId: 8, day: 9, name: "Flexiones", detail: "18 repeticiones" },
+  { id: 670, routineId: 8, day: 9, name: "Cobras", detail: "25 repeticiones" },
+  { id: 671, routineId: 8, day: 9, name: "Puñetazos", detail: "56 repeticiones" },
+  { id: 672, routineId: 8, day: 9, name: "Flexiones en caja", detail: "20 repeticiones" },
+  { id: 673, routineId: 8, day: 9, name: "Tríceps en suelo", detail: "22 repeticiones" }
 ];
 
 // Permite abrir el prototipo web aunque se inicie este servidor duplicado.
