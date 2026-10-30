@@ -705,7 +705,13 @@ const exercises = [
   { id: 686, routineId: 8, day: 12, name: "Tríceps en silla", detail: "35 repeticiones" },
   { id: 687, routineId: 8, day: 12, name: "Tablón", detail: "1 minuto" },
   { id: 688, routineId: 8, day: 12, name: "Cobras", detail: "30 repeticiones" },
-  { id: 689, routineId: 8, day: 12, name: "Puñetazos", detail: "1 minuto" }
+  { id: 689, routineId: 8, day: 12, name: "Puñetazos", detail: "1 minuto" },
+  { id: 690, routineId: 8, day: 13, name: "Escalada de montaña", detail: "40 repeticiones (20 de cada lado)" },
+  { id: 691, routineId: 8, day: 13, name: "Flexiones", detail: "25 repeticiones" },
+  { id: 692, routineId: 8, day: 13, name: "Tablón", detail: "1 minuto" },
+  { id: 693, routineId: 8, day: 13, name: "Elevaciones de brazo", detail: "35 segundos" },
+  { id: 694, routineId: 8, day: 13, name: "Flexiones de caja", detail: "20 repeticiones" },
+  { id: 695, routineId: 8, day: 13, name: "Tríceps en suelo", detail: "25 repeticiones" }
 ];
 
 app.get("/api", (req, res) => {
